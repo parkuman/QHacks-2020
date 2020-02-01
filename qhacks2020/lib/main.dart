@@ -34,6 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: <Widget>[
+          FlatButton(
+            onPressed: (){
+              //do stuff
+            },
+            child: Text("Home",),
+          ),
+        ],
       ),
       body: Stack(
         children: <Widget>[
@@ -51,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Text(
                 'Welcome to Green Kingston',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
               ),
             ],
           ),
