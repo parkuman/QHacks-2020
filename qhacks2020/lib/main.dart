@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './views/home_view.dart';
+import 'package:qhacks2020/views/home_view.dart';
 import './widgets/business_card.dart';
 
 void main() => runApp(MyApp());
@@ -11,8 +13,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        textTheme: Theme.of(context).textTheme.apply(
+            fontFamily: 'Open Sans',
+        ) // textTheme
       ),
-      home: MyHomePage(title: 'Green Kingston'), //title: 'Green Kingston'
+      home: HomeView(),
     );
   }
 }
@@ -43,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
+      
       body: Stack(
         children: <Widget>[
           Center(
