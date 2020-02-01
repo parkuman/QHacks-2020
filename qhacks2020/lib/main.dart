@@ -10,7 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(
+<<<<<<< HEAD
+=======
 
+>>>>>>> b8995a2b5c31d691e960dc38fa364c25bc77c649
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Green Kingston'), //title: 'Green Kingston'
@@ -35,6 +38,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: <Widget>[
+          FlatButton(
+            onPressed: (){
+              //do stuff
+            },
+            child: Text("Home",),
+          ),
+        ],
       ),
       body: Stack(
         children: <Widget>[
@@ -52,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Text(
                 'Welcome to Green Kingston',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
               ),
             ],
           ),
