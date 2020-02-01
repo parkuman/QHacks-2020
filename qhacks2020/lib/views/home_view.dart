@@ -1,7 +1,8 @@
 import 'package:qhacks2020/widgets/course_details/course_details.dart';
 import 'package:flutter/material.dart';
-import 'package:qhacks2020/widgets/navigation_bar.dart';
+import 'package:qhacks2020/widgets/navigation_bar/navigation_bar.dart';
 import 'package:qhacks2020/widgets/centered_view/centered_view.dart';
+import 'package:qhacks2020/widgets/call_to_action/call_to_action.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key key}) : super(key: key);
@@ -17,11 +18,14 @@ class HomeView extends StatelessWidget {
               Expanded(
                 child: Row(children: [
                   CourseDetails(), 
+                  Expanded(
+                    child: Center(
+                      child: CallToAction('Join Course')))
                 ])
-              ) //expanded
+              ) 
             ]
-          ), //column
-        ), //body
-      ); //Scaffold
+          ),
+        ),
+      );
   } //Widget build
 } //class stateless widget 
