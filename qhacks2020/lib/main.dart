@@ -64,6 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           ),
+          Row(children: <Widget>[
+            BusinessCard(text1: "The Tea Room", text2: "A Cool EngSoc Place"),
+          ],)
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
