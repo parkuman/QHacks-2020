@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './widgets/business_card.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(
+
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Green Kingston'), //title: 'Green Kingston'
