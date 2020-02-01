@@ -10,10 +10,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(
-<<<<<<< HEAD
-=======
-
->>>>>>> b8995a2b5c31d691e960dc38fa364c25bc77c649
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Green Kingston'), //title: 'Green Kingston'
@@ -62,12 +58,15 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Welcome to Green Kingston',
+                'Welcome to `Green Kingston',
                 style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
               ),
             ],
           ),
           ),
+          Row(children: <Widget>[
+            BusinessCard(text1: "Business Name ", text2: "Business Description ", text3: "And another thing ",),
+          ],),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
