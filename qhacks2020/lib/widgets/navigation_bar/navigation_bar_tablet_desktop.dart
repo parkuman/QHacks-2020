@@ -4,6 +4,7 @@ import 'package:qhacks2020/views/episodes/episodes_view.dart';
 import 'package:qhacks2020/views/about/about_view.dart';
 import 'navbar_item.dart';
 import 'navbar_logo.dart';
+import 'package:qhacks2020/routing/route_names.dart';
 
 
 class NavigationBarTabletDesktop extends StatelessWidget {

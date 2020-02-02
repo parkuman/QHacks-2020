@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:qhacks2020/views/episodes/episodes_view.dart';
+import 'package:qhacks2020/routing/route_names.dart';
+import 'package:qhacks2020/widgets/navigation_bar/navbar_item.dart';
 
 
 class DrawerItem extends StatelessWidget {
@@ -22,13 +25,13 @@ class DrawerItem extends StatelessWidget {
           NavBarItem(title, navigationPath)
         ],
       ),
-      child: Column(
-        children: <Widget>[
-          NavigationDrawerHeader(),
-          DrawerItem('Episodes', Icons.videocam, EpisodesRoute),
-          DrawerItem('About', Icons.help, AboutRoute),
-        ],
-      ),
+      // child: Column(
+      //   children: <Widget>[
+      //     NavigationDrawerHeader(),
+      //     DrawerItem('Episodes', Icons.videocam, EpisodesRoute),
+      //     DrawerItem('About', Icons.help, AboutRoute),
+      //   ],
+      // ),
     );
   }
 }

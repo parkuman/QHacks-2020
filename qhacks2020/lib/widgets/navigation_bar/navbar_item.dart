@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qhacks2020/service_locator.dart';
+import 'package:qhacks2020/services/navigation_service.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
