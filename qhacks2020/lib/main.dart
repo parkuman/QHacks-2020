@@ -70,7 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           ),
           ListView.separated(
-            //padding: const EdgeInsets.all(8),
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.all(8),
             itemCount: names.length,
             itemBuilder: (BuildContext context, int index) {
               return BusinessCard(text1: names[index], text2: description[index], rating: ratings[index], filepath: pics[index]);
