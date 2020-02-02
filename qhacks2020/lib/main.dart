@@ -5,6 +5,9 @@ import './views/home_view.dart';
 import 'package:qhacks2020/views/home_view.dart';
 import 'package:qhacks2020/service_locator.dart'; 
 import './widgets/business_card.dart';
+import 'package:qhacks2020/services/navigation_service.dart'; 
+import 'package:qhacks2020/routing/router.dart';
+import 'service_locator.dart';
 
 void main() {
   setupLocator(); 
@@ -16,6 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //
+      // navigatorKey: locator<NavigationService>().navigatorKey,
+      // onGenerateRoute: router.generateRoute,
+      // initialRoute: routes.LoginRoute,
+      //
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(

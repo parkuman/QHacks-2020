@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:qhacks2020/views/home_view.dart';
 import 'package:qhacks2020/views/episodes/episodes_view.dart';
 import 'package:qhacks2020/views/about/about_view.dart';
+import 'package:qhacks2020/routing/route_names.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   print('generateRoute: ${settings.name}');
@@ -19,7 +20,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
 PageRoute _getPageRoute(Widget child) {
   return MaterialPageRoute(
-    child: child,
+    builder: (context) => child,
   );
 }
 
