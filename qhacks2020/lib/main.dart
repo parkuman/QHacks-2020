@@ -1,18 +1,34 @@
 import 'package:flutter/material.dart';
+
+import './views/home_view.dart';
+import 'package:qhacks2020/views/home_view.dart';
+import 'package:qhacks2020/service_locator.dart'; 
 import './widgets/business_card.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator(); 
+  runApp(MyApp()); 
+}
+final List<String> names = <String>['The Tea Room', 'Starbucks', 'Tim Hortons'];
+final List<String> description = <String>['A cool EngSoc coffee shop', 'Fancy corporate coffee', 'Cheap corporate coffee'];
+final List<String> pics = <String>['assets/images/tearoom.jfif', 'assets/images/starbucks.png', 'assets/images/timhortons.jfif'];
+final List<int> ratings = <int>[5, 2, 2];
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        textTheme: Theme.of(context).textTheme.apply(
+            fontFamily: 'Open Sans',
+        ) // textTheme
       ),
-      home: MyHomePage(title: 'Green Kingston'), //title: 'Green Kingston'
+      home: HomeView(),
     );
   }
 }
@@ -34,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+
         actions: <Widget>[
           FlatButton(
             onPressed: (){
@@ -43,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
+      
       body: Stack(
         children: <Widget>[
           Center(
@@ -64,9 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           ),
-          Row(children: <Widget>[
-            BusinessCard(text1: "Business Name ", text2: "Business Description ", text3: "And another thing ",),
-          ],),
+          ListView.separated(
+            //padding: const EdgeInsets.all(8),
+            itemCount: names.length,
+            itemBuilder: (BuildContext context, int index) {
+              return BusinessCard(text1: names[index], text2: description[index], rating: ratings[index], filepath: pics[index]);
+            },
+            separatorBuilder: (BuildContext context, int index) => const Divider(),
+          ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
