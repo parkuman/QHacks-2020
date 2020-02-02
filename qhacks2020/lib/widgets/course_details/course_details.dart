@@ -12,7 +12,7 @@ class CourseDetails extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'FLUTTER WEB.\nTHE BASICS',
+            'JOHN U SMELL.\nLIKE STIR FRY',
             style: TextStyle(
                 fontWeight: FontWeight.w800, fontSize: 80, height: 0.9),
           ),
