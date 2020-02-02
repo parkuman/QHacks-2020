@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import './views/home_view.dart';
-import 'package:qhacks2020/views/home_view.dart';
+import './views/home_view.dart';
 import './widgets/business_card.dart';
 
 void main() => runApp(MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo QHACKS',
       theme: ThemeData(
         primarySwatch: Colors.green,
@@ -39,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+
         actions: <Widget>[
           FlatButton(
             onPressed: (){
