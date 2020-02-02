@@ -33,7 +33,7 @@ class HomeScreenDesktop extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 400,
+                  height: 425,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     padding: const EdgeInsets.all(8),

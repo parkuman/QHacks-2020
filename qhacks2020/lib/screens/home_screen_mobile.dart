@@ -25,6 +25,6 @@ class HomeScreenMobile extends StatelessWidget {
             },
             separatorBuilder: (BuildContext context, int index) => const Divider(),
           ),
-        );
+    );
   }
 }

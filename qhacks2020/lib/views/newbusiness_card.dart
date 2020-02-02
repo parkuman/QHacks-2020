@@ -12,14 +12,24 @@ class BusinessCard extends StatelessWidget {
       elevation: 3,
       color: Colors.white,
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 300, maxHeight: 375),
+        constraints: BoxConstraints(maxWidth: 300, maxHeight: 385),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Text(text1, textAlign: TextAlign.center), 
             Text(text2, textAlign: TextAlign.center),
             Image.asset(filepath, height: 300, width: 300),
-            Text("Green Rating $rating/5"),
+            Container(
+              height: 50,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: rating,
+                itemBuilder: (BuildContext context, int index) {
+                  return Image.asset('assets/images/leaf.png', height: 30, width: 30);
+                },
+                separatorBuilder: (BuildContext context, int index) => const Divider(),
+              ),
+            ),
           ],
         ),
       ),
