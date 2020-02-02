@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class BusinessCard extends StatelessWidget {
   final String text1, text2, filepath;
   final rating;
-  
+
   BusinessCard({this.text1, this.text2, this.rating, this.filepath});
 
   @override
@@ -11,17 +11,48 @@ class BusinessCard extends StatelessWidget {
     return Card(
       elevation: 3,
       color: Colors.white,
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 300, maxHeight: 375),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Text(text1, textAlign: TextAlign.center), 
-            Text(text2, textAlign: TextAlign.center),
-            Image.asset(filepath, height: 300, width: 300),
-            Text("Green Rating $rating/5"),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image.asset(filepath, height: 300, width: 300, fit: BoxFit.cover),
+          Container(
+            padding: EdgeInsets.all(2.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(text1,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20)),
+                      Text(text2, textAlign: TextAlign.left),
+                    ],
+                  ),
+                ),
+                //Image.asset(filepath, height: 300, width: 300, fit: BoxFit.cover),
+                SizedBox(
+                  width: 30,
+                ),
+                Container(
+                  height: 50,
+                  width: 180,
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: rating,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Image.asset('assets/images/leaf.png', height: 30, width: 30);
+                    },
+                    separatorBuilder: (BuildContext context, int index) => const Divider(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
