@@ -15,10 +15,9 @@ class BusinessCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Image.asset(filepath, height: 300, width: 300, fit: BoxFit.cover),
-          SizedBox(height: 10),
           Container(
-            padding: EdgeInsets.all(10.0),
-            child: Row(
+            padding: EdgeInsets.all(2.0),
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Container(
@@ -34,11 +33,13 @@ class BusinessCard extends StatelessWidget {
                     ],
                   ),
                 ),
+                //Image.asset(filepath, height: 300, width: 300, fit: BoxFit.cover),
                 SizedBox(
                   width: 30,
                 ),
                 Container(
                   height: 50,
+                  width: 180,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemCount: rating,
