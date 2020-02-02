@@ -4,6 +4,8 @@ import 'package:qhacks2020/widgets/navigation_bar/navigation_bar.dart';
 import 'package:qhacks2020/widgets/centered_view/centered_view.dart';
 import 'package:qhacks2020/widgets/call_to_action/call_to_action.dart';
 
+import 'newbusiness_card.dart';
+
 
 final List<String> names = <String>['The Tea Room', 'Starbucks', 'Tim Hortons'];
 final List<String> description = <String>['A cool EngSoc coffee shop', 'Fancy corporate coffee', 'Cheap corporate coffee'];
