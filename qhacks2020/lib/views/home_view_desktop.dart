@@ -9,21 +9,43 @@ class HomeViewDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: CenteredView(
-        child: Row(children: <Widget>[
-          NavigationBar(),
-          Expanded(
-            child: Row(
-              children: [
-                CourseDetails(),
-                Expanded(child: Center(child: CallToAction('Join Course')))
-              ],
-            ),
-          )
-        ]),
+      appBar: AppBar(
+        title: Text("Green Kingston"),
+        actions: <Widget>[
+          FlatButton(
+            onPressed: (){
+              //do stuff
+            },
+            child: Text("Home",),
+          ),
+        ],
       ),
+      
+      body: Stack(
+        children: <Widget>[
+          Center(
+            child: new Image.asset(
+              'assets/images/kingstoncityhall.jpg',
+              width: size.width,
+              height: size.height,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Center(
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Welcome to Green Kingston',
+                style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
+              ),
+            ],
+          ),
+          ),
+        ],
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  } //Widget build
+  }
 } //class stateless widget
