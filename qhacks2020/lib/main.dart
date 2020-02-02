@@ -69,8 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           ),
-          ListView.separated(
-            scrollDirection: Axis.horizontal,
+          Container(
+          width: 400,
+          child: ListView.separated(
+            scrollDirection: Axis.vertical,
             padding: const EdgeInsets.all(8),
             itemCount: names.length,
             itemBuilder: (BuildContext context, int index) {
@@ -78,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             separatorBuilder: (BuildContext context, int index) => const Divider(),
           ),
+        ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
