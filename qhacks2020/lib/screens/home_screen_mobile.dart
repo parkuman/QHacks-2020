@@ -14,24 +14,7 @@ class HomeScreenMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                child: Text(
-                  _navName[_selectedIndex],
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 50, height: 0.9),
-                ),
-              ),
-            ],
-          ),
-        ),
-        Container(
+    return Container(
           width: 400,
           child: ListView.separated(
             scrollDirection: Axis.vertical,
@@ -42,9 +25,6 @@ class HomeScreenMobile extends StatelessWidget {
             },
             separatorBuilder: (BuildContext context, int index) => const Divider(),
           ),
-        ),
-        // Expanded(child: Center(child: CallToAction('Join Course')))
-      ],
-    );
+        );
   }
 }
