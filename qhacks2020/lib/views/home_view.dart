@@ -9,23 +9,29 @@ class HomeView extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-        backgroundColor: Colors.white, 
-        body: CenteredView(
-          child: Column(
-            children: <Widget>[
-              NavigationBar(),
-              Expanded(
-                child: Row(children: [
-                  CourseDetails(), 
-                  Expanded(
-                    child: Center(
-                      child: CallToAction('Join Course')))
-                ])
-              ) 
-            ]
-          ),
-        ),
-      );
+      return ScreenTypeLayout(
+      mobile: HomeContentMobile(),
+      desktop: HomeContentDesktop(),
+    );
   } //Widget build
 } //class stateless widget 
+
+
+//this goes under return statement
+//      but it is Scaffold (this is a backup)
+// backgroundColor: Colors.white, 
+//         body: CenteredView(
+//           child: Column(
+//             children: <Widget>[
+//               NavigationBar(),
+//               Expanded(
+//                 child: Row(children: [
+//                   CourseDetails(), 
+//                   Expanded(
+//                     child: Center(
+//                       child: CallToAction('Join Course')))
+//                 ])
+//               ) 
+//             ]
+//           ),
+//         ),

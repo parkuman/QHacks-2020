@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:qhacks2020/widgets/navigation_bar/navbar_item.dart';
+import 'package:qhacks2020/views/episodes/episodes_view.dart';
+import 'package:qhacks2020/views/about/about_view.dart';
 
 Widget build(BuildContext context) {
     return Container(
@@ -16,11 +18,11 @@ Widget build(BuildContext context) {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[ //second child: row w/ 2 nav bars
-              NavBarItem('Episodes'),
+              NavBarItem('Episodes', EpisodesRoute),
               SizedBox(
                 width: 60,
               ),
-              NavBarItem('About'),
+              NavBarItem('About', AboutRoute),
             ],
           )
         ],

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import './views/home_view.dart';
 import 'package:qhacks2020/views/home_view.dart';
+import 'package:qhacks2020/service_locator.dart'; 
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator(); 
+  runApp(MyApp()); 
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
