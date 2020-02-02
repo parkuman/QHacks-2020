@@ -4,7 +4,6 @@ import '../tools/responsive_builder.dart';
 import './home_view_mobile.dart';
 import './home_view_desktop.dart';
 
-
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

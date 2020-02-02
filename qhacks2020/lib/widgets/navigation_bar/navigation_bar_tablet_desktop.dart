@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:qhacks2020/widgets/navigation_bar/navbar_tablet_desktop.dart';
+import 'package:qhacks2020/views/episodes/episodes_view.dart';
+import 'package:qhacks2020/views/about/about_view.dart';
 import 'navbar_item.dart';
 import 'navbar_logo.dart';
 
@@ -16,11 +18,11 @@ class NavigationBarTabletDesktop extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[ //second child: row w/ 2 nav bars
-              NavBarItem('Episodes'),
+              NavBarItem('Episodes', EpisodesRoute),
               SizedBox(
                 height: 60,
               ),
-              NavBarItem('About'),
+              NavBarItem('About', AboutRoute),
             ],
           )
         ],
