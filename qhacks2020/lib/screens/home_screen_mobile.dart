@@ -15,7 +15,7 @@ class HomeScreenMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-          width: 400,
+          width: MediaQuery.of(context).size.width,
           child: ListView.separated(
             scrollDirection: Axis.vertical,
             padding: const EdgeInsets.all(8),
