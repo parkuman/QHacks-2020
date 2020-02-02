@@ -20,13 +20,25 @@ class HomeViewDesktop extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Green Kingston"),
+        title: Text("Welcome to Green Kingston"),
         actions: <Widget>[
           FlatButton(
             onPressed: (){
               //do stuff
             },
             child: Text("Home",),
+          ),
+          FlatButton(
+            onPressed: (){
+              //do stuff
+            },
+            child: Text("Restaurants",),
+          ),
+          FlatButton(
+            onPressed: (){
+              //do stuff
+            },
+            child: Text("Shopping",),
           ),
         ],
       ),
@@ -41,21 +53,10 @@ class HomeViewDesktop extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          Center(
-            child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Welcome to Green Kingston',
-                style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 50),
-              ),
-            ],
-          ),
-          ),
           Container(
-          width: 400,
+          height: 400,
           child: ListView.separated(
-            scrollDirection: Axis.vertical,
+            scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.all(8),
             itemCount: names.length,
             itemBuilder: (BuildContext context, int index) {
